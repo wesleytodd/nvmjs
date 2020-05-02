@@ -197,11 +197,12 @@ function run (nvm, args = [], opts = {}) {
       })
     }, (err, stdout, stderr) => {
       const o = {
+        error: err,
         exitCode: cp.exitCode,
         stdout: stdout,
         stderr: stderr
       }
-      if (err) {
+      if (err && opts.rejectOnError !== false) {
         Error.captureStackTrace(err, run)
         Object.assign(err, o)
         return reject(err)

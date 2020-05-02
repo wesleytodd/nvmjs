@@ -2,7 +2,7 @@
 
 [![NPM Version](https://img.shields.io/npm/v/nvmjs.svg)](https://npmjs.org/package/nvmjs)
 [![NPM Downloads](https://img.shields.io/npm/dm/nvmjs.svg)](https://npmjs.org/package/nvmjs)
-[![Build Status](https://travis-ci.org/wesleytodd/nvmjs.svg?branch=master)](https://travis-ci.org/wesleytodd/nvmjs)
+[![test](https://github.com/wesleytodd/nvmjs/workflows/Test/badge.svg)](https://github.com/wesleytodd/nvmjs/actions?query=workflow%3ATest)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://github.com/standard/standard)
 
 A wrapper around nvm with to interact via a JavaScript interface.
