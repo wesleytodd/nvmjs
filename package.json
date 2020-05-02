@@ -1,0 +1,34 @@
+{
+  "name": "nvmjs",
+  "version": "0.0.0",
+  "description": "A wrapper around nvm with a javascript interface",
+  "main": "index.js",
+  "type": "commonjs",
+  "keywords": [
+    "nvm",
+    "nvmjs",
+    "node version",
+    "version management"
+  ],
+  "scripts": {
+    "test": "standard && mocha",
+    "debug": "mocha --inspect --inspect-brk --timeout=0",
+    "preversion": "npm t",
+    "postpublish": "git push origin && git push origin --tags"
+  },
+  "author": "Wes Todd <wes@wesleytodd.com>",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:wesleytodd/nvmjs.git"
+  },
+  "dependencies": {
+    "@pkgjs/nv": "0.0.3",
+    "fs-extra": "^9.0.0",
+    "semver": "^7.3.2"
+  },
+  "devDependencies": {
+    "mocha": "^7.1.2",
+    "standard": "^14.3.3"
+  }
+}
