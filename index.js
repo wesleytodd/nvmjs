@@ -168,7 +168,7 @@ module.exports.NVM = class NVM {
       const { stdout } = await run(this, ['current'], opts)
       return stdout.trim()
     } catch (e) {
-      console.loe(e)
+      console.log(e)
       /* ignore */
     }
     return null
