@@ -1,6 +1,6 @@
 {
   "name": "nvmjs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A wrapper around nvm with a javascript interface",
   "main": "index.js",
   "type": "commonjs",
@@ -15,7 +15,7 @@
     "debug": "mocha --inspect --inspect-brk --timeout=0",
     "preversion": "npm t",
     "postpublish": "git push origin && git push origin --tags",
-	"release": "standard-version && npm publish"
+    "release": "standard-version && npm publish"
   },
   "author": "Wes Todd <wes@wesleytodd.com>",
   "license": "ISC",
