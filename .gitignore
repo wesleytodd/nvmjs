@@ -1,6 +1,7 @@
 # default
 package-lock.json
 test/__TMP
+.nvm
 
 # Logs
 logs
