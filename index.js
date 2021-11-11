@@ -47,6 +47,9 @@ module.exports.NVM = class NVM {
       }
     }, Promise.resolve(false))
 
+    if (found) {
+      this._installed = Promise.resolve(found)
+    }
     return found || [null, null]
   }
 
@@ -97,7 +100,12 @@ module.exports.NVM = class NVM {
 
   async install (version, opts = {}) {
     const v = (await nv(version)).pop()
-    const o = await run(this, ['install', (v && v.version) || version], opts)
+    const args = ['install', (v && v.version) || version]
+    if (opts.noUse === true) {
+      args.push('--no-use')
+      delete opts.noUse
+    }
+    const o = await run(this, args, opts)
 
     // Parse out versions
     const m = o.stdout.match(/Now using node (v[0-9]+\.[0-9]+\.[0-9]+) \(npm (v[0-9]+\.[0-9]+\.[0-9]+)\)/)
@@ -190,11 +198,11 @@ function run (nvm, args = [], opts = {}) {
   return new Promise((resolve, reject) => {
     const cp = execFile(nvm.nvmBin, args, {
       ...opts,
-      env: env({
+      env: {
         ...nvm.env,
         ...(opts.env || {}),
         NVM_DIR: nvm.nvmDirectory
-      })
+      }
     }, (err, stdout, stderr) => {
       const o = {
         error: err,
