@@ -1,6 +1,6 @@
 {
   "name": "nvmjs",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A wrapper around nvm with a javascript interface",
   "main": "index.js",
   "type": "commonjs",
