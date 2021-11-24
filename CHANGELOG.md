@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5](https://github.com/wesleytodd/nvmjs/compare/v0.0.4...v0.0.5) (2021-11-24)
+
+
+### Bug Fixes
+
+* parse versions from stderr ([b85b4c2](https://github.com/wesleytodd/nvmjs/commit/b85b4c2f096f48fb3780cbaf8d28fa788883c39e))
+
 ### [0.0.4](https://github.com/wesleytodd/nvmjs/compare/v0.0.3...v0.0.4) (2021-11-24)
 
 
