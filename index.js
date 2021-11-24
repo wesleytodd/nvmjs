@@ -109,6 +109,9 @@ module.exports.NVM = class NVM {
 
     // Parse out versions
     const m = o.stdout.match(/Now using node (v[0-9]+\.[0-9]+\.[0-9]+) \(npm (v[0-9]+\.[0-9]+\.[0-9]+)\)/)
+    if (!m) {
+      throw Object.assign(new Error('Unable to parse nvm output'), o)
+    }
     const nodeVer = semver.parse(m[1])
     const npmVer = semver.parse(m[2])
 
